@@ -719,6 +719,7 @@ segButtonInit();					// (must be in, why?)initialize the
           lm73_temp |= lm73_rd_buf[1]; //"OR" in the low temp byte to lm73_temp 
           uint16_t temp = (lm73_temp >> 7);
           itoa(temp, lcd_string_array, 10); //convert to string in array with itoa() from avr-libc   
+          lcdPutStr("in:");
           lcdPutStr(lcd_string_array); 
 
 //resetting cursor to start
